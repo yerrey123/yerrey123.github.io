@@ -5,29 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="main.css">
-    <title>Random Generator</title>
+    <title>Truth or Dare</title>
 </head>
 <body>
     <div class="logo">
-        <div><a href='#'>Phuck It List!</a></div>
+        <div><a href='index.html'>Phuck It List!</a></div>
         
     </div>
     <div class="menu">
       <a href="truthdare.html">Truth or Dare</a>
+      <a href="#" class="date">Dates</a>
     </div>
     <div>
         <!--Beginning-->
 
         <div class="container">
             <span class="text0"><em>Welcome!</em></span>
-            <span class="text1">Let's Do Something Fun Today!</span>
+            <span class="text5"> Let's play!  </span>
+            <span class="text4">Truth or Dare</span>
             <!-- This button will pull information from json-->
-            <span class="text2">Press 'GO!' see what adventure awaits! </span>
+            
         </div>
-            <div id="listDisplay">
+            <div id="listDisplay2">
                 <!--List will be displayed here-->
             </div>
-        <button onclick="newList()">GO!</button>
+        <button onclick="truthList()" class="truth">Truth</button>
+            
+        <button onclick="dareList()" class="dare">Dare</button>
     </div>  
 
     <script src="javascript.js"></script>
