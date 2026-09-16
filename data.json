@@ -1,0 +1,219 @@
+{
+  "meta": {
+    "name": "Yeremia Reynaldo",
+    "role": "Senior Mac Engineer",
+    "location": "Southern Maine",
+    "email": "yreynaldo932@gmail.com",
+    "linkedin": "https://linkedin.com/in/yeremiar",
+    "tagline": "I manage a 10,000+ device Mac fleet at CVS Health, then go home and try to automate everything else in my life too.",
+    "resumeFile": "assets/Yeremia_Reynaldo_Resume.pdf",
+    "statBar": [
+      { "value": "10,000+", "label": "macOS devices managed" },
+      { "value": "921", "label": "device refresh submissions automated" },
+      { "value": "5", "label": "domains + AWS supported" },
+      { "value": "3+ yrs", "label": "enterprise Apple fleet ops" }
+    ]
+  },
+  "about": "I manage Apple devices at enterprise scale for a Fortune 10 healthcare company, but most of what I actually know I picked up by building things until they worked. I like taking a messy manual process and turning it into something that runs itself, whether that's at work or in my own house. Lately that curiosity has pulled me toward robotics and AI, mostly self-taught, one small project at a time.",
+  "outsideOfWork": {
+    "intro": "When I'm not staring at a screen, I'm probably outside. Hiking and camping around Maine with my two dogs, Aspen and Oakley, is my reset button. I also like traveling and trying new food wherever I end up.",
+    "interests": ["Hiking", "Camping", "Traveling", "Cooking", "My dogs, Aspen and Oakley"]
+  },
+  "currentlyBuilding": [
+    {
+      "title": "Raspberry Pi ad blocker",
+      "description": "Set up a Pi as a network-wide ad blocker so every device on my home network is covered automatically, no per-device app needed."
+    },
+    {
+      "title": "A local NAS",
+      "description": "Building my own network storage to keep photos and files under my own roof and cut down on paid cloud subscriptions."
+    },
+    {
+      "title": "Learning robotics",
+      "description": "Teaching myself the basics with the long-term goal of designing and building my own robot from scratch."
+    },
+    {
+      "title": "Automating as much of life as possible",
+      "description": "If I find myself doing something more than twice, I try to build a way out of doing it a third time. Still a work in progress."
+    }
+  ],
+  "skills": [
+    {
+      "category": "Scripting & Automation",
+      "items": ["Bash", "Python", "Power Automate", "Power BI"]
+    },
+    {
+      "category": "Fleet Management",
+      "items": ["Jamf Pro", "Jamf Connect", "Mosyle", "Installomator", "swiftDialog"]
+    },
+    {
+      "category": "Identity & Access",
+      "items": ["Active Directory", "Certificate-Based Auth", "Okta", "Entra ID"]
+    },
+    {
+      "category": "Operations",
+      "items": ["Incident Response", "Zero-Touch Deployment", "Vendor Collaboration", "Confluence Documentation"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Automated Device Refresh & Software Rescoping",
+      "status": "Complete",
+      "stack": ["Power Automate", "Jamf Pro API", "Microsoft Forms"],
+      "summary": "Replaced a manual, 15\u201330 minute per-device software reassignment process with a self-service flow that reads two serial numbers off a form and does the rest.",
+      "metrics": [
+        { "value": "36 \u2192 921", "label": "submissions, pilot to full production" },
+        { "value": "10\u201330", "label": "software entitlements reassigned automatically per device" },
+        { "value": "3 mo", "label": "piloted before full rollout" }
+      ],
+      "highlights": [
+        "Designed and built an end-to-end automation with Power Automate and the Jamf Pro API, no paid tooling required",
+        "Flow identifies relevant software groups, filters out base build apps, and transfers entitlements to the replacement device automatically",
+        "Real-time notifications to techs, end users, and the Mac engineering team on every run",
+        "Took it from idea to MVP in about six weeks, then through a pilot before handing it to the build team in production",
+        "Own the process end to end, including documentation and support"
+      ]
+    },
+    {
+      "name": "Offboarding Process Automation",
+      "status": "In progress",
+      "stack": ["Microsoft Forms", "Power Automate", "Jamf Pro API"],
+      "summary": "Designing a standalone workflow that handles device offboarding differently depending on why the device is leaving, not just a generic check-in.",
+      "metrics": [],
+      "highlights": [
+        "Working with other teams to map out their current offboarding processes before finalizing the design",
+        "Techs will submit a serial number, offboarding type, and notes through a simple Microsoft Form",
+        "Return to Stock: lowest risk path, device is queued to be wiped and reused",
+        "Full Retire: device gets a complete wipe",
+        "Lost or Stolen: notes capture context and the device is locked and erased, escalating through security policy automatically"
+      ]
+    },
+    {
+      "name": "AI-Powered Admin Rights Evaluation",
+      "status": "In progress",
+      "stack": ["Power Automate", "AI Builder", "SharePoint", "Microsoft Teams"],
+      "summary": "Building a self-learning system that evaluates Mac admin rights requests automatically instead of routing every one through a human reviewer.",
+      "metrics": [],
+      "highlights": [
+        "Auto-approves at 95%+ confidence and auto-denies at 90%+, routing anything below 85% confidence to a human reviewer",
+        "Includes a self-learning loop that logs every human override to improve future confidence scoring",
+        "Built entirely with Power Automate and AI Builder, no separate AI infrastructure required",
+        "Notifies requestors and reviewers through Teams and tracks every decision in SharePoint"
+      ]
+    },
+    {
+      "name": "Self-Service Prestage Assignment Workflow",
+      "status": "Complete",
+      "stack": ["Power Automate", "Jamf Pro API", "Microsoft Forms"],
+      "summary": "Removed direct Jamf console prestage access from support and build teams by giving them an auditable form-based workflow instead.",
+      "metrics": [
+        { "value": "0", "label": "techs with direct console prestage-edit access" },
+        { "value": "221", "label": "prestage requests processed since rollout" },
+        { "value": "46 sec", "label": "average automated run time" }
+      ],
+      "highlights": [
+        "Built a standalone Power Automate flow paired with Microsoft Forms for serial number + target prestage submissions",
+        "Handles the full Jamf scope assignment lifecycle automatically, no console access required",
+        "Closed off the most common source of scope misassignment errors at its source",
+        "Every change is logged with a complete audit trail, with automated failure visibility via email and Teams alerts"
+      ]
+    },
+    {
+      "name": "Self-Healing Patch Automation",
+      "status": "Complete",
+      "stack": ["Jamf Pro", "Installomator", "Bash"],
+      "summary": "Automated remediation for broken or outdated apps instead of waiting on a ticket.",
+      "metrics": [
+        { "value": "10,000", "label": "devices covered" }
+      ],
+      "highlights": [
+        "Built automated detection and re-install for broken or outdated applications",
+        "Reduced failure-related tickets and improved patch reliability fleet-wide"
+      ]
+    },
+    {
+      "name": "Installomator Zero-Touch Deployment",
+      "status": "Complete",
+      "stack": ["Installomator", "Jamf Pro", "Bash"],
+      "summary": "Tied Installomator into our basebuild so app installs are zero-touch, and made sure it holds up across every domain we run.",
+      "metrics": [],
+      "highlights": [
+        "Deployed Installomator as part of the standard basebuild for zero-touch app installation",
+        "Integrated existing proxy infrastructure so installs work reliably across all 5 domains and AWS"
+      ]
+    },
+    {
+      "name": "Self-Service Restart Notification System",
+      "status": "Complete",
+      "stack": ["Bash", "swiftDialog", "Jamf Pro"],
+      "summary": "Built a restart notification system that gets users to actually restart when they need to, without spamming them with duplicate prompts.",
+      "metrics": [],
+      "highlights": [
+        "LaunchDaemon watcher with escalation logic, so reminders get more insistent the longer a required restart is deferred",
+        "Fixed duplicate and stacking notification bugs and rebuilt the last-boot-time parser for accuracy",
+        "Restarts trigger off a simple flag file, easy to call from any other script or policy"
+      ]
+    },
+    {
+      "name": "Compliance Dashboard Cleanup",
+      "status": "Complete",
+      "stack": ["Power BI", "Jamf Pro", "OneDrive"],
+      "summary": "Surfaced the unused scripts, packages, and smart groups quietly causing clutter and 503 errors in Jamf.",
+      "metrics": [],
+      "highlights": [
+        "Cross-references scripts, packages, and smart/static groups against active policy assignments",
+        "Built a Power BI dashboard to surface anything unused",
+        "Unused assets are archived to OneDrive for recordkeeping before automatic removal"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "CVS Health",
+      "role": "Senior Mac Engineer",
+      "dates": "Feb 2023 \u2013 Present",
+      "highlights": [
+        "Manage the enterprise Mac fleet with Jamf Pro, automating software updates, patching, and compliance monitoring across 10,000+ devices",
+        "Deploy and support Jamf Connect for identity authentication across multiple Active Directory domains",
+        "Develop automation solutions using Bash, Python, and Power Automate to reduce manual overhead",
+        "Script dynamic solutions for admin rights management, reducing IT service tickets",
+        "Partner with Apple, Microsoft, and Jamf on change deployments and integrations with minimal disruption",
+        "Support incident and root-cause analysis as part of on-call rotations for P1/P2 issues",
+        "Document processes and mentor IT support staff for consistency and knowledge transfer"
+      ]
+    },
+    {
+      "company": "Spencer Thomas Group",
+      "role": "IT & Ops Support Analyst",
+      "dates": "Aug 2022 \u2013 Feb 2023",
+      "highlights": [
+        "Automated Mac device enrollment using Mosyle, significantly reducing manual work",
+        "Built self-service tools for employees to manage approved software",
+        "Managed SonicWall firewalls and implemented BitDefender antivirus",
+        "Helped launch Windows 365 virtual desktops and documented key workflows"
+      ]
+    },
+    {
+      "company": "Compass",
+      "role": "IT Support Specialist",
+      "dates": "Feb 2022 \u2013 Aug 2022",
+      "highlights": [
+        "Provided technical support for 750+ users across offices and remote locations",
+        "Built internal dashboards to track IT KPIs",
+        "Led inventory and office setup projects including video conferencing and VOIP",
+        "Supported Mac devices with Jamf and Windows systems via Datto RMM"
+      ]
+    },
+    {
+      "company": "Right Networks",
+      "role": "IT Support / Secure Workstation",
+      "dates": "Dec 2019 \u2013 Oct 2021",
+      "highlights": [
+        "Deployed antivirus and backup solutions for endpoint security",
+        "Participated in response to potential security incidents",
+        "Used PowerShell and Confluence for system checks and documentation",
+        "Trained support staff on procedures and troubleshooting"
+      ]
+    }
+  ]
+}
